@@ -59,10 +59,15 @@ They can be installed automatically by creating the conda environment above.
 ### Data generation
 
 ### Plotting
+To plot the figures in the manuscript, the scipt plotting.py can be used. To run the script:
+```
+./plotting.py --figure i
+```
+with i indicates the figure number that is required, e.g. 1 refers to Figure 1 in the manuscript. Therefore this number is limited in 1-5, corresponding to Figure 1-5 in the paper. After running the script an svg file named 'figi.svg' will be saved.   
 
 ### PEP_Vectorized
 PEP_Vectorized is a package that can compute the prophylactic efficacy 
-in a vectorized way, i.e. this package can compute the PrEP and PEP efficacy trajectory of multiple regimens for multiple individuals in a single run. For detailed usage of this package please check the examples in 'bottom_up/PEP_Vectorized/example.ipynb'. 
+in a vectorized way, i.e. this package can compute the PrEP and PEP efficacy trajectory of multiple regimens for multiple individuals in a single run. For detailed usage of this package please check the examples in 'PEP_Vectorized/example.ipynb'. 
 
 ## About data
 The folder 'data' contains pre-generated data that are necessary for plotting the figures in the paper.
