@@ -3,6 +3,7 @@
 
 from scipy import special
 from PEP_Vectorized.PEPV import *
+import warnings
 
 def compute_inoculum_distribution(mode='rvi'):
     """
@@ -43,6 +44,7 @@ def compute_inoculum_distribution(mode='rvi'):
 
     # success rate for different exposure
     r = 9.1e-5 if mode == 'rai' else 3.7136e-3 
+    warnings.filterwarnings('ignore')
     return p_v0(r)
 
 
@@ -62,7 +64,7 @@ def compute_efficacy(pe, mode='rvi'):
     e_0.add_regimen(r0)
     e_0.compute_extinction_probability_fullmodel()
     res_0 = e_0.get_extinction_probability()
-    pe_0 = res_0[0,0,0,0,0]
+    pe_0 = float(res_0[0,0,0,0,0])
     # probability distribution of inoculum
     p_virus = compute_inoculum_distribution(mode)
     # calculte the averge extinction probability based on inoculum size

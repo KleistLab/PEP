@@ -336,4 +336,6 @@ if __name__ == '__main__':
         plot_fig4_5(data2='./data/Fig5/fig5c.pkl', 
                     data3='./data/Fig5/fig5d.pkl', 
                     data7='./data/Fig5/fig5e.pkl', figname='fig5')
+    else:
+        print('No corresponding figure. Please give a number in range 1-5.')
     print('Done')
